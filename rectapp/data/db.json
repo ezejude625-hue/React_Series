@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "checked": false,
+      "item": "Almonds, Unsulted in the blue bag."
+    },
+    {
+      "id": 2,
+      "checked": false,
+      "item": "Pizza"
+    },
+    {
+      "id": 3,
+      "checked": false,
+      "item": "Bread"
+    },
+    {
+      "id": 4,
+      "checked": false,
+      "item": "Status"
+    },
+    {
+      "id": 5,
+      "checked": false,
+      "item": "Cookies"
+    }
+  ]
+}
