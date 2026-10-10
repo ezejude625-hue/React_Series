@@ -37,6 +37,14 @@ echo -----------------------------------------
 git add .
 echo.
 
+if errorlevel 1 (
+    echo.
+    echo [ERROR] Failed to stage files.
+    echo.
+    pause
+    exit /b 1
+)
+
 rem Commit Changes
 echo ----------------------------
 echo    Committing Changes...
@@ -46,12 +54,28 @@ if "%commitMsg%"=="" set "commitMsg=Update Files"
 git commit -m "%commitMsg%"
 echo.
 
+if errorlevel 1 (
+    echo.
+    echo [ERROR] Commit failed. Nothing will be pushed.
+    echo.
+    pause
+    exit /b 1
+)
+
 rem Push changes to repository
 echo --------------------------------------
 echo    Pushing Changes To Repository...
 echo --------------------------------------
-git push
+git push origin main
 echo.
+
+if errorlevel 1 (
+    echo.
+    echo [ERROR] Push failed.
+    echo.
+    pause
+    exit /b 1
+)
 
 rem Check the status of the repository
 echo --------------------------------------
